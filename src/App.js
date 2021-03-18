@@ -17,8 +17,12 @@ function App() {
 		// //add the given item to the shopping cart
 		// preventDefault()
 		console.log('Cart: ', cart,'Item: ', item)
-		setCart( ...cart, [item])
+		setCart( [...cart, item])
 	};
+
+	const removeItem = item => {
+
+	}
 
 	return (
 		<div className="App">
