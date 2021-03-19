@@ -33,7 +33,7 @@ function App() {
 
 	const removeItem = item => {
 		setCart(
-			cart.filter(product => item.product_id !== product.product_id
+			cart.filter(product => item.id !== product.id
 		))
 	}
 
