@@ -8,10 +8,11 @@ import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 import {ProductContext} from './contexts/ProductContext';
 import {CartContext} from './contexts/CartContext';
+import useAddState from './hooks/useAddState'
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useAddState([]);
 
 	const addItem = item => {
 		const checker = cart.some(book => book===item);
