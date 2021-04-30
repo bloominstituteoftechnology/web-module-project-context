@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
 
@@ -10,8 +10,14 @@ import ProductContext from './contexts/ProductContext';
 import CartContext from './contexts/CartContext';
 
 function App() {
+	const persistedCart = JSON.parse(localStorage.getItem('cart')) || [];
 	const [products] = useState(data); //one state property
-	const [cart, setCart] = useState([]); //two state property
+	const [cart, setCart] = useState(persistedCart); //two state property
+
+	// Update localStorage `cart` on every `cart` state update
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(cart));
+	}, [cart])
 
 	const addItem = item => {
 		// add the given item to the cart
@@ -21,6 +27,7 @@ function App() {
 	};
 
 	function removeItem (itemToRemoveId) {
+		// TODO: If I add the same book 4 times, should this remove it once, or every instance?
 		setCart([...cart.filter(cartItem => 
 			cartItem.id !== itemToRemoveId
 		)])
