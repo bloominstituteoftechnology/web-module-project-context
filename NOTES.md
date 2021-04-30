@@ -18,4 +18,40 @@
 
     NOTE:  We initialize later, when providing the context to a component tree.
 
+4) Import ProductContext into App.
+
+5) Wrap all of your components/routes in `App.js` inside of `ProductContext.Provider` component.
+
+  - Next pass a value prop to your `Provider`.
+
+  - eg. 		
+  <ProductContext.Provider value={{products, addItem}}>
+    <Route exact path="/">
+      <Products />
+    </Route>
+  </ProductContext.Provider>
+
+6) Import { useContext } in the component you wish to access the context.
+
+  [] import React, { useContext } from 'react';
+
+7) import your context in the component you wish to access the context.
+
+  [] import { ProductContext } from '../contexts/ProductContext'; 
+
+8) In the component, call the `useContext` hook and pass in the context object we want to use into it.
+
+  - eg. 
+
+  const { products, addItem } = useContext(ProductContext);
+
+
+  NOTE: When we do this, `useContext` is going to return value passed by our `ProductContext` Provider `value` prop. In our case we're getting back an object with two properties. A `products` property and a `addItem` property. We can go ahead and destructure those.
+
+9) 
+
+
+
+
+
 
