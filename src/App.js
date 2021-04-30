@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
 
@@ -6,27 +6,49 @@ import data from './data';
 import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
+import ProductContext from './contexts/ProductContext';
+import CartContext from './contexts/CartContext';
 
 function App() {
-	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const persistedCart = JSON.parse(localStorage.getItem('cart')) || [];
+	const [products] = useState(data); //one state property
+	const [cart, setCart] = useState(persistedCart); //two state property
+
+	// Update localStorage `cart` on every `cart` state update
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(cart));
+	}, [cart])
 
 	const addItem = item => {
 		// add the given item to the cart
+		const updateCart = [...cart, item]
+		setCart(updateCart);
+		console.log("Added things to cart", updateCart);
 	};
+
+	function removeItem (itemToRemoveId) {
+		// TODO: If I add the same book 4 times, should this remove it once, or every instance?
+		setCart([...cart.filter(cartItem => 
+			cartItem.id !== itemToRemoveId
+		)])
+	}
 
 	return (
 		<div className="App">
-			<Navigation cart={cart} />
+			<ProductContext.Provider value={{ products, addItem }}>
+				<CartContext.Provider value={{ cart, removeItem }}>
+					<Navigation /> 
 
-			{/* Routes */}
-			<Route exact path="/">
-				<Products products={products} addItem={addItem} />
-			</Route>
+					{/* Routes */}
+					<Route exact path="/">
+						<Products />
+					</Route>
 
-			<Route path="/cart">
-				<ShoppingCart cart={cart} />
-			</Route>
+					<Route path="/cart">
+						<ShoppingCart />
+					</Route>
+				</CartContext.Provider>
+			</ProductContext.Provider>
 		</div>
 	);
 }
