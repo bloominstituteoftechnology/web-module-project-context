@@ -8,16 +8,19 @@ import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
 function App() {
-	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [products] = useState(data); //one state property
+	const [cart, setCart] = useState([]); //two state property
 
 	const addItem = item => {
 		// add the given item to the cart
+		const updateCart = [...cart, item]
+		setCart(updateCart);
+		console.log("Added things to cart", updateCart);
 	};
 
 	return (
 		<div className="App">
-			<Navigation cart={cart} />
+			<Navigation cart={cart} /> 
 
 			{/* Routes */}
 			<Route exact path="/">
