@@ -1,4 +1,3 @@
-import React, { createContext } from "react";
-import data from "../data";
+import { createContext } from "react";
 
 export const ProductContext = createContext();
