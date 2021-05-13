@@ -12,16 +12,29 @@ import CartContext from './contexts/CartContext';
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
+	const [cart, setCart] = useState(localStorage.getItem('Cart') ? JSON.parse(localStorage.getItem('Cart')) : []);
 
-	const addItem = item => {
-		setCart([...cart, item]);
+	const addItem = (item) => {
+		const data = [...cart, item];
+		setCart(data);
+		localStorage.setItem('Cart', JSON.stringify(data));
+	};
+
+	const removeItem = (id) => {
+		const data = [...cart.filter(item => item.id !== id)];
+		setCart(data);
+		if (data.length === 0) {
+			localStorage.removeItem('Cart');
+		}
+		else {
+			localStorage.setItem('Cart', JSON.stringify(data));
+		}
 	};
 
 	return (
 		<div className="App">
 			<ProductContext.Provider value={{ products, addItem }}>
-				<CartContext.Provider value={{ cart }}>
+				<CartContext.Provider value={{ cart, removeItem }}>
 					<Navigation />
 
 					{/* Routes */}
