@@ -1,5 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+
+import Products from './Products';
+import Product from './Product';
+import ShoppingCart from './ShoppingCart';
+import ShoppingCartItem from './ShoppingCartItem';
+
+import ProductContext from './../contexts/ProductContext';
+import CartContext from './../contexts/CartContext';
+
 
 const Navigation = props => {
 	return (
@@ -12,4 +21,6 @@ const Navigation = props => {
 	);
 };
 
-export default Navigation;
+export default function Navigation(){
+	const product = useContext(ProductContent);
+}

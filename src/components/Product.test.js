@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Product from './Product';
 
+
 test('Product component renders without crashing', () => {
   const wrapper = render(<Product
     product={{
