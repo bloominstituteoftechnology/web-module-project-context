@@ -27,6 +27,7 @@ function App() {
 			<Route path="/cart">
 				<ShoppingCart cart={cart} />
 			</Route>
+			hm
 		</div>
 	);
 }
