@@ -7,7 +7,7 @@ import Navigation from './components/Navigation';
 import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
-function App() {
+export default function App() {
 	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
@@ -30,5 +30,3 @@ function App() {
 		</div>
 	);
 }
-
-export default App;
