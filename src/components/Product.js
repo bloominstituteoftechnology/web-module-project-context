@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{ useContext } from 'react';
+
 
 const Product = props => {
 	return (
