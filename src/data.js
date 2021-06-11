@@ -28,6 +28,34 @@ export default [
 			'https://images-na.ssl-images-amazon.com/images/I/61uUPXbhMxL._SX397_BO1,204,203,200_.jpg'
 	}
 ];
+   
+  
+  
+  
+  
+   
+  
+  
+  
+  
+   
+  
+  
+  
+  
+   
+  
+  
+  
+  
+   
+  
+  
+  
+  
+   
+  
+  
   
   
   
@@ -35,18 +63,5 @@ export default [
   
   
     
-  
-  
-    
-  
-  
-    
-  
-  
-    
-  
-  
-    
-  
   
   
