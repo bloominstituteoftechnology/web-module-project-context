@@ -2,6 +2,18 @@
 
 In this module you will take your newfound knowledge of `Context API` and refactor a e-commerce store to use `Context API` as well as extend the functionality of the application making it more robust!
 
+- [Module Project: Context API - Shopping Cart](#module-project-context-api---shopping-cart)
+  - [Introduction](#introduction)
+    - [Commits](#commits)
+    - [Description](#description)
+    - [Instructions](#instructions)
+    - [Task 1: Project Set up](#task-1-project-set-up)
+    - [Task 2: MVP](#task-2-mvp)
+    - [Task 3: Stretch Problems](#task-3-stretch-problems)
+  - [Submission Format](#submission-format)
+  - [Rick Mansfield's pull/push req link](#rick-mansfields-pullpush-req-link)
+  - [Resources](#resources)
+
 ## Introduction
 
 Read these instructions carefully. Understand exactly what is expected _before_ starting this project.
@@ -169,3 +181,6 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 ## Rick Mansfield's pull/push req link
 [Link for Convenience]()
+
+## Resources
+- 
