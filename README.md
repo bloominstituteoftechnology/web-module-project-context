@@ -180,7 +180,7 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
 
 ## Rick Mansfield's pull/push req link
-[Link for Convenience]()
+[Link for Convenience](https://github.com/LambdaSchool/web-module-project-context/pull/52)
 
 ## Resources
 - 
