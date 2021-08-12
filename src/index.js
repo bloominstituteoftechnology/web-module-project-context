@@ -4,11 +4,11 @@ import { BrowserRouter as Router, withRouter } from 'react-router-dom';
 import './sass/index.scss';
 import App from './App';
 
-const AppWithRouter = withRouter(App);
+// const AppWithRouter = withRouter('App');
 
 ReactDOM.render(
 	<Router>
-		<AppWithRouter />
+		<App />
 	</Router>,
 	document.getElementById('root')
 );
