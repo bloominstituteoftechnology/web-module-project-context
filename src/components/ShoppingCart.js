@@ -6,6 +6,7 @@ import Item from './ShoppingCartItem';
 
 const ShoppingCart = props => {
 	const { cart } = useContext(CartContext)
+	console.log(cart)
 	const getCartTotal = () => {
 		return cart.reduce((acc, value) => {
 			return acc + value.price;
@@ -14,6 +15,7 @@ const ShoppingCart = props => {
 
 	return (
 		<div className="shopping-cart">
+
 			{cart.map(item => (
 				<Item key={item.id} {...item} />
 			))}
@@ -22,6 +24,7 @@ const ShoppingCart = props => {
 				<p>Total: ${getCartTotal()}</p>
 				<button>Checkout</button>
 			</div>
+
 		</div>
 	);
 };
