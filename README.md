@@ -11,6 +11,7 @@ In this module you will take your newfound knowledge of `Context API` and refact
     - [Task 2: MVP](#task-2-mvp)
     - [Task 3: Stretch Problems](#task-3-stretch-problems)
   - [Submission Format](#submission-format)
+  - [Rick Mansfield's Pull Req](#rick-mansfields-pull-req)
 
 ## Introduction
 
@@ -176,3 +177,6 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 ## Submission Format
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+
+## Rick Mansfield's Pull Req
+- [Link](https://github.com/LambdaSchool/web-module-project-context/pull/74)
