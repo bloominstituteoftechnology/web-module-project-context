@@ -25,8 +25,8 @@ In this project you'll take take an almost completed e-commerce store and refact
 - [√] Download project dependencies by running `npm install`.
 - [√] Start up the app using `npm start`.
 - [√] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [√] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [√] Push commits: git push origin `<firstName-lastName>`.
 
 ### Task 2: MVP
 
@@ -166,4 +166,4 @@ Do not attempt stretch problems until MVP has been reached and a final commit ha
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
+- [√] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
