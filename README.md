@@ -167,6 +167,7 @@ We have now successfully converted our application into using `Context API` 🔥
 - Consume data using the `useContext` hook from `ProductContext` and `CartContext`
 
 ### Task 3: Stretch Problems
+I did not do these to make time to prepare for the Sprint and focus on Modules 1-3
 
 Do not attempt stretch problems until MVP has been reached and a final commit has been made.
 
