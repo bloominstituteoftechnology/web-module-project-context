@@ -35,7 +35,7 @@ Before you get started, please take a few minutes and get acquainted with this a
 
 - To combat this from happening we're going to refactor our application to use `Context API`, making it easier and more effiecent to access data across our application.
 
-**Step 1 - Add item functionality**
+**Step 1 - Add item functionality**x
 
 - In `App.js` there is a function called `addItem`. Finish writing the logic in this function to be able to add the given item to the shopping cart
 
@@ -105,9 +105,9 @@ const { products, addItem } = useContext(ProductContext);
 
 **STEP 5 - Create the CartContext**
 
-- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.
+- Now that we have refactored our `Products` component to utilize `Context API` let's refactor our `Cart` and `Navigation` Component to use `Context API` as well.x
 
-- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.
+- To start create a new file in our contexts folder named `CartContext.js`, this context is going to be utilized by our `ShoppingCart` and `Navigation` component.x
 
 - Inside of our new `CartContext` import `createContext` and create a new context named `CartContext`.
 
