@@ -4,10 +4,9 @@ import CartContext from './../contexts/CartContext'
 
 const Item = (props) => {
 	const { removeItem } = useContext(CartContext)
-	console.log('props from item',props)
+	
 	const handleClick = () =>{
 		removeItem(props.id)
-		console.log(props.id)
 	}
 	return (
 		<div className="shopping-cart_item">

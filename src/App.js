@@ -18,12 +18,11 @@ function App() {
 		setCart([...cart, item])
 	};
 
-	const removeItem = id =>{
-		setCart([cart.filter(item=>{
-			if(item.id === !id){
-				return item
-			}}
-		)])
+	const removeItem = e =>{
+		setCart(cart.filter(item=>{
+			return item.id !== e
+		}))
+		console.log(e)
 	}
 
 	return (

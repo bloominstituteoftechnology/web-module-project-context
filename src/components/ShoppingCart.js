@@ -11,7 +11,7 @@ const ShoppingCart = () => {
 			return acc + value.price;
 		}, 0).toFixed(2);
 	};
-
+	console.log('this is cart', cart)
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
