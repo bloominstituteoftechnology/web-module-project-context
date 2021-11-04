@@ -150,7 +150,7 @@ We have now successfully converted our application into using `Context API` 🔥
 
 - xCreate a `ProductContext` and a `CartContext`
 -x Use the Provider Component from `ProductContext` and `CartContext` to provide data to child components
-- xConsume data using the `useContext` hook from `ProductContext` and `CartContext`
+-xConsume data using the `useContext` hook from `ProductContext` and `CartContext`
 
 ### Task 3: Stretch Problems
 
