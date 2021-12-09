@@ -7,7 +7,7 @@ import CartContext from '../contexts/CartContext';
 
 
 const ShoppingCart = () => {
-	const cart = useContext(CartContext);
+	const {cart,setCart} = useContext(CartContext);
 	
 
 	const getCartTotal = () => {
@@ -15,11 +15,16 @@ const ShoppingCart = () => {
 			return acc + value.price;
 		}, 0).toFixed(2);
 	};
+	const removeItem = item => {
+		setCart(cart.filter(product => product.id !== item.id))
+	}
 
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
-				<Item key={item.id} {...item} />
+				<CartContext.Provider value = {removeItem}>
+					<Item key={item.id} {...item}/>
+				</CartContext.Provider>
 			))}
 
 			<div className="shopping-cart__checkout">

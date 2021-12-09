@@ -18,6 +18,7 @@ function App() {
 		// add the given item to the cart
 		setCart([...cart,item])
 	};
+	
 
 	return (
 		<div className="App">
@@ -34,10 +35,10 @@ function App() {
 			</Route>
 			</ProductContext.Provider>
 
-			<ProductContext.Provider value = {cart}>
-				<CartContext.Provider value = {cart}>
+			<ProductContext.Provider value = {{cart,setCart}}>
+				<CartContext.Provider value = {{cart,setCart}}>
 					<Route path="/cart">
-						<ShoppingCart cart={cart} />
+						<ShoppingCart  />
 					</Route>
 				</CartContext.Provider>
 			</ProductContext.Provider>
