@@ -1,7 +1,9 @@
 import React from 'react';
+import { useState } from 'react';
 
 const Item = props => {
-	return (
+
+		return (
 		<div className="shopping-cart_item">
 			<img src={props.image} alt={`${props.title} book`} />
 
